@@ -26,5 +26,5 @@ runs:
     - name: Set Output for caching
       id: set-cache   
       run:
-        echo "cached='${{ inputs.caching }}'" >> $GITHUB_OUTPUT
+        echo "cached=${{ inputs.caching }}" >> $GITHUB_OUTPUT
       shell: bash  
