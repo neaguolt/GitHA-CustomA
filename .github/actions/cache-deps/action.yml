@@ -22,7 +22,9 @@ runs:
     - name: Install dependencies
       id: install
       if: steps.cache.outputs.cache-hit != 'true' || inputs.caching != 'true'
-      run: |
-        npm ci
+      run: npm ci
+      shell: bash
+    - name: Set Output for caching
+      run:
         echo "cached='${{ inputs.caching }}'" >> $GITHUB_OUTPUT
       shell: bash  
