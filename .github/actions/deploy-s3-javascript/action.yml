@@ -13,7 +13,7 @@ inputs:
     default: us-east-2
 outputs:
   website-url:
-    description:"The URL of the live website"
+    description: "The URL of the live website"
 
 runs:
   using: 'node20'
