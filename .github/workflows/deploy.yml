@@ -74,5 +74,5 @@ jobs:
           region: us-east-2
           dist: ./dist
       - name: Output site URL
-        run |
+        run: |
           echo "Live URL: ${{ steps.deploy.outputs.website-url }}"
