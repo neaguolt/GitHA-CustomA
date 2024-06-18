@@ -9,7 +9,7 @@ function run() {
     const region= core.getInput('region', { required: true })
 
     //Upload file
-    const s3URI= `s3://${s3bucket}`;
+    const s3URI= `s3://${bucket}`;
     core.exec(`aws s3 sync ${dist} ${s3URI} --region ${region}`)
 }
 
