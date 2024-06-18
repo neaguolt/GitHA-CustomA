@@ -10,7 +10,7 @@ function run() {
 
     //Upload file
     const s3URI= `s3://${bucket}`;
-    core.exec(`aws s3 sync ${dist} ${s3URI} --region ${region}`)
+    exec.exec(`aws s3 sync ${dist} ${s3URI} --region ${region}`)
 }
 
 run();
