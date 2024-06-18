@@ -11,6 +11,9 @@ inputs:
     description: "Name of the s3 bucket"
     required: false
     default: us-east-2
+outputs:
+  website-url:
+    description:"The URL of the live website"
 
 runs:
   using: 'node20'
