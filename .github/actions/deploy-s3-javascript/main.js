@@ -3,7 +3,14 @@ const github= require('@actions/github');
 const exec= require('@actions/exec');
 
 function run() {
-    core.notice('Hello from JS CUstom Action!');
+    //Get the inputs values
+    const bucket= core.getInput('s3bucket', { required: true })
+    const dist= core.getInput('dist', { required: true })
+    const region= core.getInput('region', { required: true })
+
+    //Upload file
+    const s3URI= `s3://${s3bucket}`;
+    core.exec(`aws s3 sync ${dist} ${s3URI} --region ${region}`)
 }
 
 run();

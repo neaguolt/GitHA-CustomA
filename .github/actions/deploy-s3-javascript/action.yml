@@ -1,5 +1,17 @@
 name: 'Deploy to AWS S3'
 description: "Deploy web site files to S3 AWS service "
+inputs:
+  s3bucket:
+    description: "Name of the s3 bucket"
+    required: true
+  dist:
+    description: "Path to build files"
+    required: true
+  region:
+    description: "Name of the s3 bucket"
+    required: false
+    default: us-east-2
+
 runs:
   using: 'node20'
   main: 'main.js'
